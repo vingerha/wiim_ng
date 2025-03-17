@@ -2,7 +2,7 @@
 
 This is a improved and extended integration for WiiM devices, based on the latest work in [the fork of m-stefanski](https://github.com/m-stefanski/home-assistant-custom-components-wiim-ng)
 
-This component allows you to integrate control of WiiM Mini, Pro, Pro Plus and Amp devices into your [Home Assistant](http://www.home-assistant.io) smart home system. Originally developed for LinkPlay devices by @nicjo814, @limych and @nagyrobi, later forked by @onlyoneme.
+This integration allows you to control the WiiM Mini, Pro, Pro Plus and Amp devices from your [Home Assistant](http://www.home-assistant.io) smart home system. 
 
 ## Installation oin Home Assistant (awaiting HACS acceptance)
 
@@ -28,6 +28,7 @@ Available after the device has been created
   *(integer)* *(Optional)* Step size in percent to change volume when calling `volume_up` or `volume_down` service against the media player. Defaults to `5`, can be a number between `1` and `25`.
 
 ## Gratitude goes out to the following authors/contributors
+Parts of the integration were originally developed for LinkPlay devices by the following people
     "@nicjo814",
     "@limych",
     "@nagyrobi",
