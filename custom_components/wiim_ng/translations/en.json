@@ -1,0 +1,100 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+		  "host": "IP of your WiiM Device",
+		  "name": "Name",
+		  "uuid": "Hardware UUID of the player"
+        },
+        "description": "Select parameters to identify your device"
+      }
+	}
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Customize the way the integration works",
+        "data": {
+          "volume_step": "Step size in percent to change volume when calling volume_up or volume_down service"
+        }
+      }
+    }
+  },
+  "services": {
+    "command": {
+      "name": "WiiM Command",
+      "description": "Execute various wiim-specific commands on the player",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+		  "description": "select the player against which the command wil be executed."
+		},
+		"command": {
+          "name": "Command to be executed",
+		  "description": "select from the list"
+		},
+		"notify": {
+          "name": "Notification",
+		  "description": "Displays the result of the command as a persistent notification."
+		}
+	  }
+	},
+	"play_url": {
+      "name": "Play URL",
+      "description": "Play URL file",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+		  "description": "select the player against which the command wil be executed."
+		},
+		"url": {
+          "name": "URL",
+		  "description": "Provide the full path to the file to be played"
+		}	
+	  }
+	},
+	"preset": {
+      "name": "Preset",
+      "description": "Executes existing preset on the device.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+		  "description": "select the player against which the command wil be executed."
+		},
+		"preset": {
+          "name": "Preset",
+		  "description": "Existing preset number on the device"
+		}	
+	  }
+	},
+	"audio_output_set": {
+      "name": "Set Audio Output",
+      "description": "Choose where to send audio to",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+		  "description": "select the player against which the command wil be executed."
+		},
+		"audio_output_mode": {
+          "name": "Output to",
+		  "description": "select from the list"
+		}
+	  }
+	},
+	"audio_input_set": {
+      "name": "Set Audio Input",
+      "description": "Choose where to receive audio from",
+      "fields": {
+        "entity_id": {
+          "name": "Entity ID",
+		  "description": "select the player against which the command wil be executed."
+		},
+		"audio_input_mode": {
+          "name": "Input from",
+		  "description": "select from the list"
+		}
+	  }
+	}
+  }
+}

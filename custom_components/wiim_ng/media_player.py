@@ -59,7 +59,7 @@ from .const import *
 
 _LOGGER = logging.getLogger(__name__)
 
-SERVICE_CMND_SCHEMA = VolDictType={
+SERVICE_CMD_SCHEMA = VolDictType={
     vol.Required(ATTR_ENTITY_ID): cv.comp_entity_ids,
     vol.Required(ATTR_CMD): cv.string,
     vol.Optional(ATTR_NOTIFY, default=False): cv.boolean
@@ -171,7 +171,7 @@ async def async_setup_entry(hass, entry: ConfigEntry, async_add_entities: AddEnt
     
     platform.async_register_entity_service(
         SERVICE_CMD,
-        SERVICE_CMND_SCHEMA,
+        SERVICE_CMD_SCHEMA,
         "async_execute_command",
         supports_response=SupportsResponse.OPTIONAL,
     )
@@ -217,7 +217,7 @@ class WiiMDevice(MediaPlayerEntity):
         self._device = device
         self._uuid = uuid
         self._fw_ver = '1.0.0'
-        self._device_model = 'Unknown'
+        self._device_model = 'WiiM Device'
         requester = AiohttpRequester(UPNP_TIMEOUT)
         self._factory = UpnpFactory(requester)
         self._upnp_device = None
@@ -281,9 +281,9 @@ class WiiMDevice(MediaPlayerEntity):
         self._attr_device_info = DeviceInfo(
             name=f"WiiM Devices",
             entry_type=DeviceEntryType.SERVICE,
-            identifiers={(DOMAIN, f"Wiim")},
-            manufacturer="Wiim",
-            model='Model Unknown',
+            identifiers={(DOMAIN, f"WiiM")},
+            manufacturer="WiiM",
+            model='WiiM Device',
         )
 	
     async def call_wiim_httpapi(self, cmd, jsn):

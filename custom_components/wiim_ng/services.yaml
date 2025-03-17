@@ -24,7 +24,6 @@ command:
     notify:
       name: Notification
       description: Displays the result of the command as a persistent notification in Lovelace UI (optional, defaults to True). Set to False during automations to avoid seeing these.
-      example: false
       required: false
       default: false
       selector:
