@@ -1,0 +1,206 @@
+command:
+  name: Command
+  description: Execute various wiim-specific commands on the player.
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player against which the command wil be execuded.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    command:
+      name: Command
+      description:
+      example: Update
+      required: true
+      selector:
+        select:
+          options:
+            - "Device Status"
+            - "Playback Status"
+            - "Current Track Metadata"
+    notify:
+      name: Notification
+      description: Displays the result of the command as a persistent notification in Lovelace UI (optional, defaults to True). Set to False during automations to avoid seeing these.
+      example: false
+      required: false
+      default: false
+      selector:
+        boolean:
+        
+alarmclock_set:
+  name: Alarm Clock
+  description: Sets the alarmclock, max 3 alaramclock settings allowed
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player against which the command wil be execuded.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    alarm_number:
+      name: Select which alarm to set 
+      description: max 3 alarms are possible
+      required: required
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 3
+    alarm_trigger:
+      name: Select what to do with the alarm 
+      description: 
+      required: true
+      default: "Once"
+      selector:
+        select:
+          options:
+            - "Cancel"
+            - "Once" 
+            - "Every Day"
+            - "Every Week"
+            - "Every Month"
+    alarm_action:
+      name: Select what to do when triggered 
+      description: 
+      required: true
+      selector:
+        select:
+          options:
+            - "Playback or Ring"
+            - "Stop Playback"
+    alarm_time:
+        name: Time
+        description:
+        required: true
+        selector:
+            time: {}
+    alarm_date:
+        name: Day
+        description: Mandatory if trigger = Once
+        required: false
+        selector:
+            date: {}
+    alarm_weekday:
+        name: Day of the week
+        description: Mandatory if trigger = Every Week
+        required: false
+        selector:
+          select:
+            options:  
+              - "Monday"
+              - "Tuesday"
+              - "Wednesday"
+              - "Thursday"
+              - "Friday"
+              - "Saturday"
+              - "Sunday"      
+    alarm_monthday:
+        name: Day of the month
+        description: Mandatory if trigger = Every Month
+        required: false
+        selector:
+            number:
+                min: 0
+                max: 31
+    alarm_url:
+        name: URL to play
+        required: false
+        selector:
+            string:
+        
+play_url:
+  name: Play URL
+  description: Play URL file.
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player on which the playback wil be execuded.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    url:
+      name: URL
+      description: URL string
+      example: http://xyz.com/test.mp3
+      required: true
+      selector:
+        text:
+preset:
+  name: Preset
+  description: Execute preset on the device.
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player for which the preset will be recalled.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    preset:
+      name: Preset
+      description: Content preset number on the device
+      example: 1
+      required: true
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 12
+          mode: box
+
+audio_output_set:
+  name: Set Audio Output
+  description: Chose where to send audio to
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player for which the preset will be recalled.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    audio_output_mode:
+      name: output to
+      description: 
+      required: true
+      default: "COAX"
+      selector:
+        select:
+          options:  
+            - "SPDIF"
+            - "AUX"
+            - "COAX"
+audio_input_set:
+  name: Set Audio Input
+  description: Chose where to receive audio from
+  fields:
+    entity_id:
+      name: Entity ID
+      description: Entity ID of the player for which the preset will be recalled.
+      example: media_player.sound_room1
+      required: true
+      selector:
+        entity:
+          integration: wiim_custom_ng
+    audio_input_mode:
+      name: input from
+      description: 
+      required: true
+      default: "WiFi"
+      selector:
+        select:
+          options:  
+            - "Line-in"
+            - "Bluetooth"
+            - "Toslink"
+            - "USB"
+            - "WiFi"          
