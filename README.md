@@ -4,9 +4,9 @@ This is a improved and extended integration for WiiM devices, based on the lates
 
 This integration allows you to control the WiiM Mini, Pro, Pro Plus and Amp devices from your [Home Assistant](http://www.home-assistant.io) smart home system. 
 
-## Installation oin Home Assistant (awaiting HACS acceptance)
+## Installation on Home Assistant (awaiting HACS acceptance)
 
-- add this URL as a Custom repository to HACS (3-dots top right), then
+- add this URL as a 'Custom Repository' to HACS (3-dots top right), then
 - HACS > Integrations > WiiM ...download
 - restart HA
 - add your setup via Settings > Devices & Services, new integration; WiiM
