@@ -28,6 +28,14 @@ Available after the device has been created
 **volume_step:**  
   *(integer)* *(Optional)* Step size in percent to change volume when calling `volume_up` or `volume_down` service against the media player. Defaults to `5`, can be a number between `1` and `25`.
 
+## Configuration Settings
+Available Services
+- Command (API commands to extract core settings of the device and playing data)
+- Preset
+- Play URL
+- Set Audio Output Mode
+- Set Audio Input Mode
+
 ## Gratitude goes out to the following authors/contributors
 Parts of the integration were originally developed for LinkPlay devices by the following people
     "@nicjo814",
