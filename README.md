@@ -25,6 +25,7 @@ For a large part it uses the [WiiM published API](https://www.wiimhome.com/pdf/H
 
 ### Configuration Options
 Available after the device has been created 
+
 **volume_step:**  
   *(integer)* *(Optional)* Step size in percent to change volume when calling `volume_up` or `volume_down` service against the media player. Defaults to `5`, can be a number between `1` and `25`.
 
