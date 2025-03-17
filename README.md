@@ -1,10 +1,11 @@
 ![GitHub release (with filter)](https://img.shields.io/github/v/release/vingerha/wiim_ng)
 
 This is a improved / extended integration for WiiM devices, based on the latest work in [the fork of m-stefanski](https://github.com/m-stefanski/home-assistant-custom-components-wiim-ng)
+This integration allows you to control the WiiM Mini, Pro, Pro Plus and Amp devices from your [Home Assistant](http://www.home-assistant.io) smart home system.
 
-**Important** Home Assistant has a native integration [LinkPlay](https://www.home-assistant.io/integrations/linkplay) which will also work for WiiM devices to create a media_player. It however wil lliely (unclear) not comver WiiM specifics as this integration aims to achieve.
+**Important** Home Assistant has a native integration [LinkPlay](https://www.home-assistant.io/integrations/linkplay) which will also work for WiiM devices to create a media_player. It however likely will not  (unclear) cover WiiM specifics, as this integration aims to achieve.
 
-This integration allows you to control the WiiM Mini, Pro, Pro Plus and Amp devices from your [Home Assistant](http://www.home-assistant.io) smart home system. 
+ 
 
 ## Installation on Home Assistant (awaiting HACS acceptance)
 
