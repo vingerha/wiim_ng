@@ -1,0 +1,6 @@
+{
+  "name": "WiiM control for HomeAssistant",
+  "filename": "wiim_ng.zip",
+  "render_readme": true,
+  "homeassistant": "2025.1"
+}
