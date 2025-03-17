@@ -12,7 +12,7 @@ For a large part it uses the [WiiM published API](https://www.wiimhome.com/pdf/H
 - restart HA
 - add your setup via Settings > Devices & Services, new integration; WiiM
 
-### Configuration Settings
+## Configuration Settings
 
 **host:**  
   *(string)* *(Required)* The IP address of the WiiM unit. Make sure it gets the same IP via static lease.
@@ -28,8 +28,7 @@ Available after the device has been created
 **volume_step:**  
   *(integer)* *(Optional)* Step size in percent to change volume when calling `volume_up` or `volume_down` service against the media player. Defaults to `5`, can be a number between `1` and `25`.
 
-## Configuration Settings
-Available Services
+## Available Services
 - Command (API commands to extract core settings of the device and playing data)
 - Preset
 - Play URL
