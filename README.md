@@ -7,10 +7,10 @@ For a large part it uses the [WiiM published API](https://www.wiimhome.com/pdf/H
 
 ## Installation on Home Assistant (awaiting HACS acceptance)
 
-- add this URL as a 'Custom Repository' to HACS (3-dots top right), then
-- HACS > Integrations > WiiM ...download
+- add this URL (https://github.com/vingerha/wiim_ng) as an integratoin via the 'Custom Repository' options in HACS (3-dots top right), then
+- HACS > type in: WiiM > select the WiiM integration > click download
 - restart HA
-- add your setup via Settings > Devices & Services, new integration; WiiM
+- add your WiiM device, via Settings > Devices & Services, click; Add integration > search/select WiiM
 
 ## Configuration Settings
 
