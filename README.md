@@ -5,7 +5,7 @@ For a large part it uses the [WiiM published API](https://www.wiimhome.com/pdf/H
 
 **Important** Home Assistant has a native integration [LinkPlay](https://www.home-assistant.io/integrations/linkplay) which will also work for WiiM devices and create a media_player. I am partially improving that one too but since this requires updates to a python library as well as the core integration, this will go slow
 
-## Installation on Home Assistant (awaiting HACS acceptance)
+## Installation on Home Assistant
 
 - add this URL (https://github.com/vingerha/wiim_ng) as an integration via the 'Custom Repository' options in HACS (3-dots top right), then
 - HACS > type in: WiiM > select the WiiM integration > click download
