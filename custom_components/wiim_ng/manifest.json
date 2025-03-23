@@ -1,5 +1,5 @@
 {
-  "domain": "wiim_custom_ng",
+  "domain": "wiim_ng",
   "name": "WiiM",
   "version":"0.1.0",
   "documentation": "https://github.com/vingerha/home-assistant-custom-components-wiim-ng",
