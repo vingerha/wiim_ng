@@ -1,6 +1,6 @@
 from datetime import timedelta
 
-DOMAIN = 'wiim_custom'
+DOMAIN = 'wiim_ng'
 
 ICON_DEFAULT = 'mdi:speaker'
 ICON_PLAYING = 'mdi:speaker-wireless'
